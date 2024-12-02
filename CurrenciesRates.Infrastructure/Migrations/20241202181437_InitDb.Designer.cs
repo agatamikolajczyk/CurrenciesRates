@@ -3,7 +3,6 @@ using System;
 using CurrenciesRates.Infrastructure.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -12,43 +11,39 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CurrenciesRates.Infrastructure.Migrations
 {
     [DbContext(typeof(CurrenciesRatesContext))]
-    [Migration("20241201181753_InitDb")]
+    [Migration("20241202181437_InitDb")]
     partial class InitDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
             modelBuilder.Entity("CurrenciesRates.Application.Models.CurrencyRate", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Ask")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Ask")
+                        .HasPrecision(10, 4)
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Bid")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Bid")
+                        .HasPrecision(10, 4)
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Currency")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("VARCHAR(3)");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("CurrenciesRates");
+                    b.ToTable("CurrenciesRates", (string)null);
                 });
 #pragma warning restore 612, 618
         }

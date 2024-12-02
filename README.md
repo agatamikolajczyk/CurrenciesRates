@@ -2,8 +2,7 @@
 Założenia:
 
 1. API NBP oferuje kursy kupna i sprzedaży walut tylko w tabeli C, dlatego ta zastała użyta w aplikacji
-
-2. NBP aktualizuje tabelę A w każdy dzień roboczy między godziną 11:45, a 12:15. Zadanie cykliczne w mojej aplikacji będzie uruchamiane codziennie o 12:15 i będzie pobierać kurs walut z dnia bieżącego
-3. Przykład wywołania endpointu {url}/currency-rate?currencyCode={waluta}&date={data}
-
+2. Przykład wywołania endpointu {url}/currency-rate?currencyCode={waluta}&date={data}
+3. Jeśli zapytanie do API jest o walutę z datą której nie ma w bazie - odpytuję bezpośrednio API NBP, zapisuję te dane w bazie i zwracam dane z API
+4. Użyłam bazy danych sqlLite aby aplikacja mogła zostać uruchomiona na środowisku produkcyjnym jednym kliknięciem
 Z uwagi na brak zaawanosowanej logiki biznesowej moja palikacja nie posiada warstwy domenowej

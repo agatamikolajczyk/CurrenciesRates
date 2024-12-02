@@ -1,7 +1,12 @@
 using CurrenciesRates.Application.Exception;
 using CurrenciesRates.Application.Handlers;
 using CurrenciesRates.Application.Queries;
+using CurrenciesRates.Application.Repositories;
+using CurrenciesRates.Application.Services;
+using CurrenciesRates.Application.Stores;
 using CurrenciesRates.Infrastructure.EF;
+using CurrenciesRates.Infrastructure.Repositories;
+using CurrenciesRates.Infrastructure.Store;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,8 +19,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetCurrencyRateByDateHandler).Assembly));
 
-builder.Services.AddDbContext<CurrenciesRatesContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<CurrenciesRatesContext>
+(options =>
+    options.UseSqlite("Data Source=app.db"));
+
+builder.Services.AddScoped<ICurrenciesService, CurrenciesService>();
+builder.Services.AddScoped<ICurrencyRateStore, NBPStore>();
+builder.Services.AddScoped<ICurrenciesRatesRepository, CurrenciesRatesRepository>();
 
 var app = builder.Build();
 

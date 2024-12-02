@@ -15,11 +15,11 @@ namespace CurrenciesRates.Infrastructure.Migrations
                 name: "CurrenciesRates",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Currency = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Bid = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ask = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Currency = table.Column<string>(type: "VARCHAR(3)", nullable: false),
+                    Bid = table.Column<decimal>(type: "TEXT", precision: 10, scale: 4, nullable: false),
+                    Ask = table.Column<decimal>(type: "TEXT", precision: 10, scale: 4, nullable: false),
+                    Date = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
