@@ -34,4 +34,4 @@ Architektura ta zwiększa elastyczność, ułatwia testowanie oraz pozwala na ł
 
 ## Docker
 
-Aplikacja zawiera przygotowany plik `Dockerfile`, który umożliwia łatwą publikację aplikacji na różnych serwerach, w tym na platformach takich jak **Azure** czy **Docker Hub**. Plik ten umożliwia zbudowanie obrazu kontenera, który jest gotowy do uruchomienia w środowisku produkcyjnym.
+Aplikacja zawiera przygotowany plik `Dockerfile`, który umożliwia łatwą publikację aplikacji na różnych serwerach, w tym na platformach takich jak **Azure**. Plik ten umożliwia zbudowanie obrazu kontenera, który jest gotowy do uruchomienia w środowisku produkcyjnym.
