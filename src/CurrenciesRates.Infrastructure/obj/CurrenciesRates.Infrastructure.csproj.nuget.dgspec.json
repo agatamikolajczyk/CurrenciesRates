@@ -1,0 +1,160 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Infrastructure/CurrenciesRates.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Application/CurrenciesRates.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Application/CurrenciesRates.Application.csproj",
+        "projectName": "CurrenciesRates.Application",
+        "projectPath": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Application/CurrenciesRates.Application.csproj",
+        "packagesPath": "/home/agatamikolajczyk/.nuget/packages/",
+        "outputPath": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Application/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/agatamikolajczyk/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://proget.fakro.pl/nuget/FakroNuGet": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Infrastructure/CurrenciesRates.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Infrastructure/CurrenciesRates.Infrastructure.csproj",
+        "projectName": "CurrenciesRates.Infrastructure",
+        "projectPath": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Infrastructure/CurrenciesRates.Infrastructure.csproj",
+        "packagesPath": "/home/agatamikolajczyk/.nuget/packages/",
+        "outputPath": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/agatamikolajczyk/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://proget.fakro.pl/nuget/FakroNuGet": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Application/CurrenciesRates.Application.csproj": {
+                "projectPath": "/home/agatamikolajczyk/MyProjects/CurrenciesRates/src/CurrenciesRates.Application/CurrenciesRates.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "RestEase": {
+              "target": "Package",
+              "version": "[1.6.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -11,7 +11,8 @@ public class CurrenciesRatesRepository(CurrenciesRatesContext context) : ICurren
 
     public async Task<CurrencyRate?> GetAsync(string currencyCode, DateTime date)
     {
-        return await _context.CurrenciesRates.FirstOrDefaultAsync(x=>x.Currency==currencyCode && x.Date == date.Date);
+        return await _context.CurrenciesRates.FirstOrDefaultAsync(
+            x => x.Currency == currencyCode && x.Date == date.Date);
     }
 
     public async Task SetAsync(CurrencyRate currencyRate)

@@ -5,7 +5,7 @@ namespace CurrenciesRates.Infrastructure.EF;
 
 public class CurrenciesRatesContext(DbContextOptions<CurrenciesRatesContext> options) : DbContext(options)
 {
-    public DbSet<CurrencyRate?> CurrenciesRates { get; set; }
+    public DbSet<CurrencyRate> CurrenciesRates { get; set; }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
